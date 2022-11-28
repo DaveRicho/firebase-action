@@ -1,5 +1,5 @@
 name: 'GitHub Action for Firebase'
-author: 'Jeremy Shore'
+author: 'David Richardson (inspired by Jeremy Shore)'
 description: 'Wraps the firebase-tools CLI to enable common commands.'
 
 branding:
@@ -12,4 +12,4 @@ outputs:
 
 runs:
   using: 'docker'
-  image: 'docker://w9jds/firebase-action:v11.16.0'
+  image: 'docker://davericho/firebase-action:v11.16.0'
