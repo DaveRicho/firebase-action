@@ -1,4 +1,4 @@
-# GitHub Actions for Firebase
+# GitHub Actions for Firebase (Forked from Jeremy Shore's awesome: https://github.com/w9jds/firebase-action)
 
 This Action for [firebase-tools](https://github.com/firebase/firebase-tools) enables arbitrary actions with the `firebase` command-line client.
 
@@ -72,7 +72,7 @@ jobs:
           name: dist
           path: dist
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
+        uses: davericho/firebase-action@master
         with:
           args: deploy --only hosting
         env:
@@ -102,7 +102,7 @@ Starting with version v2.1.2 each version release will point to a versioned dock
 
 ```yaml
   name: Deploy to Firebase
-  uses: docker://w9jds/firebase-action:master
+  uses: docker://davericho/firebase-action:master
   with:
     args: deploy --only hosting
   env:
