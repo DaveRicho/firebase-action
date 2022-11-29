@@ -16,7 +16,14 @@ RUN npm i -g npm@8.10.0
 RUN npm i -g firebase-tools@11.16.0
 
 COPY LICENSE README.md /
+
 COPY "entrypoint.sh" "/entrypoint.sh"
+
+COPY entrypoint.sh /usr/bin/
+COPY entrypoint.sh /
+
+RUN chmod +x /usr/bin/entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["--help"]
